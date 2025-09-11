@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<link rel="stylesheet" href="template">
+    <div class="bg-img"></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张钊睿的博客-人机验证</title>
+    <!-- 引入 Cloudflare Turnstile 官方JS -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		text-align: center; /* 使搜索框居中显示 */
+		margin-top: 50px; /* 顶部留白 */
+	}
+	。search-container {
+		display: flex;
+		justify-content: center; /* 使输入框和按钮在一行上并居中 */
+		align-items: center; /* 垂直居中 */
+	}
+	input[type="text"] {
+		width: 300px;
+		padding: 10px;
+		margin-right: 5px; /* 与按钮之间留有间隔 */
+	}
+	input[type="submit"] {
+		padding: 10px 20px;
+	}
+</style>
+<body>
+            <img style="display:inline-block;vertical-align:middle;width:20px;height:20px" alt="萌ICP备案号" src="/icon/moe.png">
+				<a href="https://winver18.pages.dev/301.html">萌icp备20250666号</a>
+	<a class="text-gray-dark" href="https://beian.miit.gov.cn/">京ICP备2024098823号-3</a>
+            <p>© 2022-2025 张钊睿</p>
+    <script>
+		
+        // 定义回调函数，当用户完成验证后调用
+        function onVerify(token) {
+            // 验证成功，跳转到 index.php
+            window.location.href = 'index2.html';
+        }
+    </script>
+</body>
+
+</html>
+
 
