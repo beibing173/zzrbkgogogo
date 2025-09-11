@@ -28,6 +28,151 @@
 	}
 </style>
 <body>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 25px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+        
+        .btn:hover::after {
+            transform: translateX(0);
+        }
+        
+        .btn-red {
+            background: linear-gradient(45deg, #ff5252, #ff0000);
+        }
+        
+        .btn-green {
+            background: linear-gradient(45deg, #4caf50, #2e7d32);
+        }
+        
+        .instruction {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .instruction h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        @media (max-width: 600px) {
+            。buttons-container {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            。btn {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <h1>zzrbk网站快速导航</h1>
+    <script>
+		 <div class="buttons-container">
+            <button class="btn btn-red" onclick="navigateTo('left')">oid.zzrbk.xyz 旧站</button>
+            <button class="btn btn-green" onclick="navigateTo('right')">new.zzrbk.xyz 新站</button>
+        </div>
+        
+        function navigateTo(buttonType) {
+            // 在这里修改您想要跳转的网站链接
+            const leftUrl = "https://oid.zzrbk.xyz/";   // 红色按钮跳转的网站
+            const rightUrl = "https://new.zzrbk.xyz/";  // 绿色按钮跳转的网站
+            
+            if (buttonType === 'left') {
+                window.open(leftUrl, '_blank');
+            } else if (buttonType === 'right') {
+                window.open(rightUrl, '_blank');
+            }
+        }
+<p>new站炸了先访问red (oid)</p>
             <img style="display:inline-block;vertical-align:middle;width:20px;height:20px" alt="萌ICP备案号" src="/moe.png">
 				<a href="https://winver18.pages.dev/301.html">萌icp备20250666号</a>
 	<a class="text-gray-dark" href="https://beian.miit.gov.cn/">京ICP备2024098823号-3</a>
